@@ -24,3 +24,15 @@ mutation {
     username, id, age,
   }
 }
+
+
+# Fragments
+fragment userWithoutAge on User {
+  id, username
+}
+
+query {
+  getAllUsers {
+    ...userWithoutAge, posts {title, content}
+  }
+}

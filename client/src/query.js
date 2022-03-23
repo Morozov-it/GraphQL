@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-
+//простой get запрос на получение всего массива
 export const GET_ALL_USERS = gql`
     query {
         getAllUsers {
@@ -9,10 +9,11 @@ export const GET_ALL_USERS = gql`
     }
 `;
 
-export const GET_USER = (id) => gql`
-    query {
-        getUser(id: ${id}) {
-            id, username, age, posts {title, content}
+//запрос на получение конкретной записи с аргументом
+export const GET_USER = gql`
+    query getUser($id: ID){
+        getUser(id: $id) {
+            username, age
         }
     }
 `;

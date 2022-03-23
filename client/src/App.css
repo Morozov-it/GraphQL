@@ -46,6 +46,7 @@ input {
   gap: 1rem;
 }
 button {
+  cursor: pointer;
   position: relative;
   display: block;
   padding: 2px;
