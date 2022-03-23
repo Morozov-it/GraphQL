@@ -6,5 +6,5 @@ npm i express graphql express-graphql cors nodemon cross-env
 
 
 # client
-create-react-app
-npm i 
+cra
+npm install @apollo/client graphql

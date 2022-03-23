@@ -22,28 +22,25 @@ const createUser = (input) => {
 }
 
 
-//объект с методами для работы с запросами (resolver)
-const root = {
-    getAllUsers: () => {
-        return users
-    },
-    getUser: ({ id }) => {
-        return users.find(user => user.id == id)
-    },
-    createUser: ({ input }) => {
-        const user = createUser(input)
-        users.push(user)
-        return user
-    }
-};
-
-
 //подключение GraphQL
 app.use('/graphql', graphqlHTTP({
     graphiql: true, //интерактивная страница работы с запросами
     schema, //схема данных
-    rootValue: root //
+    rootValue: { //функции для работы с запросами (resolver)
+        getAllUsers: () => {
+            return users
+        },
+        getUser: ({ id }) => {
+            return users.find(user => user.id == id)
+        },
+        createUser: ({ input }) => {
+            const user = createUser(input)
+            users.push(user)
+            return user
+        }
+    }
 }));
+
 
 //запуск приложения
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

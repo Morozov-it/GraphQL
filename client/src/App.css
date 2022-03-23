@@ -1,4 +1,60 @@
 .App {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem;
   text-align: center;
 }
+.form {
+  padding: 20px 5px;
+  max-width: 500px;
+  margin: 10px auto;
+  border: 1px solid rgb(151, 150, 150);
+  border-radius: 5px;
+}
 
+.list {
+  padding: 5px;
+  max-width: 500px;
+  margin: 10px auto;
+  border: 1px solid rgb(151, 150, 150);
+  border-radius: 5px;
+}
+.user {
+  padding: 2px;
+}
+.error {
+  color: red;
+}
+
+.label {
+  display: flex;
+  margin-bottom: 1rem;
+  flex-direction: column;
+}
+.label span {
+  text-align: left;
+}
+input {
+  padding: 0 5px;
+  line-height: 2rem;
+}
+
+.handlers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+button {
+  position: relative;
+  display: block;
+  padding: 2px;
+  width: 100%;
+  background-color: rgb(41, 109, 211);
+  color: white;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+button:active {
+  top: 1px
+}
