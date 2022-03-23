@@ -1,7 +1,7 @@
 ### Install dependencies
 
 # server
-npm i express graphql express-graphql cors nodemon
+npm i express graphql express-graphql cors nodemon cross-env
 
 
 
